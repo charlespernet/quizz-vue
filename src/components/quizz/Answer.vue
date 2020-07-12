@@ -17,4 +17,15 @@ export default {
   color: black;
   margin: 5px 0;
 }
+.selected {
+  background: lightblue;
+}
+
+.correct {
+  background: greenyellow;
+}
+
+.incorrect {
+  background: lightcoral;
+}
 </style>

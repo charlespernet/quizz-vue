@@ -2,7 +2,7 @@
   <div>
     <div class="card">
       <div class="score">{{score}} pts</div>
-      <div class="question">{{currentQuestion}}</div>
+      <div class="question">{{content}}</div>
     </div>
   </div>
 </template>
@@ -10,7 +10,7 @@
 <script>
 export default {
   props: {
-    currentQuestion: String,
+    content: String,
     score: Number
   }
 };
