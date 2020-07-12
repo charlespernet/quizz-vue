@@ -4,7 +4,7 @@
     <Timer :timerPercent="timerPercent" />
     <div v-for="(answer, index) in shuffledAnswers" :key="index">
       <div @click="selectAnswer(index)">
-        <Answer :answer="answer" :key="index" v-bind:class="answerClass(index)" />
+        <Answer :answer="answer" :key="index" v-bind:class="answerClassObject(index)" />
       </div>
     </div>
   </div>
@@ -80,20 +80,15 @@ export default {
         this.currentQuestion.correct_answer
       );
     },
-    answerClass(index) {
-      let answerClass = "";
-      if (!this.answered && this.selectedIndex === index) {
-        answerClass = "selected";
-      } else if (this.answered && this.correctIndex === index) {
-        answerClass = "correct";
-      } else if (
-        this.answered &&
-        this.selectedIndex === index &&
-        this.correctIndex !== index
-      ) {
-        answerClass = "incorrect";
-      }
-      return answerClass;
+    answerClassObject(index) {
+      return {
+        selected: !this.answered && this.selectedIndex === index,
+        correct: this.answered && this.correctIndex === index,
+        incorrect:
+          this.answered &&
+          this.selectedIndex === index &&
+          this.correctIndex !== index
+      };
     }
   },
   computed: {
