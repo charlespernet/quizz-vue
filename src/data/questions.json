@@ -1,0 +1,20 @@
+[
+  {
+    "content": "Quel animal ?",
+    "correct_answer": "Cheetah",
+    "incorrect_answers": [
+      "Lion",
+      "Thomson&rsquo;s Gazelle",
+      "Pronghorn Antelope"
+    ]
+  },
+  {
+    "content": "Quel bière ?",
+    "correct_answer": "Maroual",
+    "incorrect_answers": [
+      "Jeanlin",
+      "Brooklyn",
+      "lagger"
+    ]
+  }
+]

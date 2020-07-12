@@ -1,0 +1,109 @@
+<template>
+  <div v-if="currentQuestion">
+    <Question :score="score" :content="currentQuestion.content" />
+    <Timer :timerPercent="timerPercent" />
+    <div v-for="(answer, index) in shuffledAnswers" :key="index">
+      <div @click="selectAnswer(index)">
+        <Answer :answer="answer" :key="index" v-bind:class="answerClass(index)" />
+      </div>
+    </div>
+  </div>
+  <div v-else>
+    <Question :score="score" :content="'plus de questions'" />
+  </div>
+</template>
+
+<script>
+import _ from "lodash";
+
+import Question from "./quizz/Question.vue";
+import Timer from "./quizz/Timer.vue";
+import Answer from "./quizz/Answer.vue";
+
+import questions from "../data/questions.json";
+export default {
+  data() {
+    return {
+      questions: questions,
+      index: 0,
+      score: 0,
+      answeredCount: 0,
+      answered: false,
+      selectedIndex: null,
+      correctIndex: null,
+      timerPercent: 50,
+      shuffledAnswers: []
+    };
+  },
+  components: {
+    Question,
+    Timer,
+    Answer
+  },
+  watch: {
+    currentQuestion: {
+      immediate: true,
+      handler() {
+        this.selectedIndex = null;
+        this.answered = false;
+        this.shuffleAnswers();
+      }
+    }
+  },
+  methods: {
+    selectAnswer(index) {
+      this.selectedIndex = index;
+      _.delay(() => {
+        this.submitAnswer();
+      }, 400);
+      _.delay(() => {
+        this.next();
+      }, 1300);
+    },
+    submitAnswer() {
+      this.answered = true;
+      if (this.selectedIndex === this.correctIndex) {
+        this.score++;
+      }
+    },
+    next() {
+      this.index++;
+    },
+    shuffleAnswers() {
+      if (!this.currentQuestion) return;
+      let answers = [
+        ...this.currentQuestion.incorrect_answers,
+        this.currentQuestion.correct_answer
+      ];
+      this.shuffledAnswers = _.shuffle(answers);
+      this.correctIndex = this.shuffledAnswers.indexOf(
+        this.currentQuestion.correct_answer
+      );
+    },
+    answerClass(index) {
+      let answerClass = "";
+      if (!this.answered && this.selectedIndex === index) {
+        answerClass = "selected";
+      } else if (this.answered && this.correctIndex === index) {
+        answerClass = "correct";
+      } else if (
+        this.answered &&
+        this.selectedIndex === index &&
+        this.correctIndex !== index
+      ) {
+        answerClass = "incorrect";
+      }
+      return answerClass;
+    }
+  },
+  computed: {
+    currentQuestion: function() {
+      return this.questions[this.index];
+    }
+  }
+};
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+</style>
