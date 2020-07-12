@@ -1,11 +1,13 @@
 <template>
   <div id="app">
     <Header />
-    <Quizz />
+    <Quizz :questions="questions" :seconds="seconds" />
   </div>
 </template>
 
 <script>
+import questions from "./data/questions.json";
+
 import Header from "./components/Header.vue";
 import Quizz from "./components/Quizz.vue";
 
@@ -14,6 +16,9 @@ export default {
   components: {
     Header,
     Quizz
+  },
+  data() {
+    return { questions: questions, seconds: 15 };
   }
 };
 </script>

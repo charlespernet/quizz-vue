@@ -6,7 +6,29 @@
 
 <script>
 export default {
-  props: { timerPercent: Number }
+  data() {
+    return {
+      remainingSeconds: this.seconds
+    };
+  },
+  props: { seconds: Number },
+  watch: {
+    remainingSeconds: {
+      handler(value) {
+        if (value > 0) {
+          setTimeout(() => {
+            this.remainingSeconds--;
+          }, 1000);
+        }
+      },
+      immediate: true
+    }
+  },
+  computed: {
+    timerPercent: function() {
+      return (this.remainingSeconds / this.seconds) * 100;
+    }
+  }
 };
 </script>
 
