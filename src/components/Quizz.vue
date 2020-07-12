@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="currentQuestion">
     <Question :score="score" :content="currentQuestion.content" />
     <Timer :timerPercent="timerPercent" />
     <div v-for="(answer, index) in shuffledAnswers" :key="index">
@@ -7,6 +7,9 @@
         <Answer :answer="answer" :key="index" v-bind:class="answerClass(index)" />
       </div>
     </div>
+  </div>
+  <div v-else>
+    <Question :score="score" :content="'plus de questions'" />
   </div>
 </template>
 
@@ -52,10 +55,10 @@ export default {
       this.selectedIndex = index;
       _.delay(() => {
         this.submitAnswer();
-      }, 500);
+      }, 400);
       _.delay(() => {
         this.next();
-      }, 1000);
+      }, 1300);
     },
     submitAnswer() {
       this.answered = true;
@@ -67,6 +70,7 @@ export default {
       this.index++;
     },
     shuffleAnswers() {
+      if (!this.currentQuestion) return;
       let answers = [
         ...this.currentQuestion.incorrect_answers,
         this.currentQuestion.correct_answer

@@ -13,12 +13,12 @@ export default {
 <style lang='scss' scoped>
 .timer {
   background: white;
-  padding: 5px;
+  padding: 3px;
   margin: 10px 0;
   border-radius: 6px;
   &-gauge {
     background: greenyellow;
-    height: 20px;
+    height: 13px;
   }
 }
 </style>

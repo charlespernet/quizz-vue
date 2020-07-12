@@ -16,23 +16,5 @@
       "Brooklyn",
       "lagger"
     ]
-  },
-  {
-    "content": "Quel Habit ?",
-    "correct_answer": "Bonnet",
-    "incorrect_answers": [
-      "Pull",
-      "Echarpe",
-      "Pantalon"
-    ]
-  },
-  {
-    "content": "Quel café ?",
-    "correct_answer": "Latte",
-    "incorrect_answers": [
-      "Allongé",
-      "Expresso",
-      "Mocca"
-    ]
   }
 ]

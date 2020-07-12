@@ -12,10 +12,12 @@ export default {
 
 <style scoped>
 .answer {
-  padding: 5px;
+  padding: 1px;
   background: white;
   color: black;
-  margin: 5px 0;
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 18px;
 }
 .selected {
   background: lightblue;

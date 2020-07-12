@@ -40,6 +40,6 @@ export default {
   font-weight: bold;
   font-size: 22px;
   padding: 50px 15px;
-  height: 170px;
+  height: 140px;
 }
 </style>
