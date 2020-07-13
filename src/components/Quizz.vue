@@ -1,8 +1,7 @@
 <template>
   <div v-if="currentQuestion">
-    <p v-if="frozen">FROZEN</p>
     <Question :score="score" :content="currentQuestion.content" />
-    <Timer :milliseconds="milliseconds" />
+    <Timer :milliseconds="milliseconds" @timeout="timeout" />
     <transition-group
       name="custom-classes-transition"
       enter-active-class="animate__animated animate__backInRight"
@@ -37,7 +36,6 @@ export default {
     return {
       index: 0,
       score: 0,
-      answered: false,
       selectedIndex: null,
       correctIndex: null,
       shuffledAnswers: [],
@@ -59,7 +57,6 @@ export default {
       immediate: true,
       handler() {
         this.selectedIndex = null;
-        this.answered = false;
         this.shuffleAnswers();
         this.frozen = false;
       }
@@ -69,9 +66,9 @@ export default {
     selectAnswer(index) {
       if (this.frozen) return;
 
-      this.frozen = true;
       this.selectedIndex = index;
       _.delay(() => {
+        this.frozen = true;
         this.submitAnswer();
       }, 400);
       _.delay(() => {
@@ -79,7 +76,9 @@ export default {
       }, 1300);
     },
     submitAnswer() {
-      this.answered = true;
+      this.correctIndex = this.shuffledAnswers.indexOf(
+        this.currentQuestion.correct_answer
+      );
       if (this.selectedIndex === this.correctIndex) {
         this.score++;
       }
@@ -94,16 +93,16 @@ export default {
         this.currentQuestion.correct_answer
       ];
       this.shuffledAnswers = _.shuffle(answers);
-      this.correctIndex = this.shuffledAnswers.indexOf(
-        this.currentQuestion.correct_answer
-      );
+    },
+    timeout() {
+      this.frozen = true;
     },
     answerClassObject(index) {
       return {
-        selected: !this.answered && this.selectedIndex === index,
-        correct: this.answered && this.correctIndex === index,
+        selected: !this.frozen && this.selectedIndex === index,
+        correct: this.frozen && this.correctIndex === index,
         incorrect:
-          this.answered &&
+          this.frozen &&
           this.selectedIndex === index &&
           this.correctIndex !== index
       };

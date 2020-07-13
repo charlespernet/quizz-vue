@@ -19,6 +19,7 @@ export default {
         if (value <= 0) {
           clearInterval(this.timerInterval);
           this.remainingMilliSeconds = 0;
+          this.$emit("timeout", "someValue");
         }
       },
       immediate: true
