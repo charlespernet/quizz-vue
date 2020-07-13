@@ -1,10 +1,10 @@
 <template>
   <div v-if="currentQuestion">
     <Question :score="score" :content="currentQuestion.content" />
-    <Timer :timerPercent="timerPercent" />
+    <Timer :milliseconds="milliseconds" />
     <div v-for="(answer, index) in shuffledAnswers" :key="index">
       <div @click="selectAnswer(index)">
-        <Answer :answer="answer" :key="index" v-bind:class="answerClassObject(index)" />
+        <Answer :answer="answer" :key="index" :class="answerClassObject(index)" />
       </div>
     </div>
   </div>
@@ -20,20 +20,25 @@ import Question from "./quizz/Question.vue";
 import Timer from "./quizz/Timer.vue";
 import Answer from "./quizz/Answer.vue";
 
-import questions from "../data/questions.json";
 export default {
+  props: {
+    questions: Array,
+    milliseconds: Number
+  },
   data() {
     return {
-      questions: questions,
       index: 0,
       score: 0,
-      answeredCount: 0,
       answered: false,
       selectedIndex: null,
       correctIndex: null,
-      timerPercent: 50,
       shuffledAnswers: []
     };
+  },
+  computed: {
+    currentQuestion: function() {
+      return this.questions[this.index];
+    }
   },
   components: {
     Question,
@@ -89,11 +94,6 @@ export default {
           this.selectedIndex === index &&
           this.correctIndex !== index
       };
-    }
-  },
-  computed: {
-    currentQuestion: function() {
-      return this.questions[this.index];
     }
   }
 };
