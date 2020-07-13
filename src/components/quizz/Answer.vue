@@ -1,12 +1,17 @@
 <template>
-  <div class="answer">
+  <div class="answer" @click="onClick">
     <p>{{answer}}</p>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["answer"]
+  props: { answer: String, index: Number },
+  methods: {
+    onClick() {
+      this.$emit("select", { index: this.index });
+    }
+  }
 };
 </script>
 

@@ -15,10 +15,10 @@ export default {
   watch: {
     remainingMilliSeconds: {
       handler(value) {
-        console.log(value);
         if (value <= 0) {
           clearInterval(this.timerInterval);
           this.remainingMilliSeconds = 0;
+          this.$emit("timeout", "someValue");
         }
       },
       immediate: true
