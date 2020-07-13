@@ -1,6 +1,6 @@
 <template>
   <div v-if="currentQuestion">
-    <Question :score="score" :content="currentQuestion.content" />
+    <Question :content="currentQuestion.content" :class="{'card-rotated': frozen}" />
     <Timer :milliseconds="milliseconds" @timeout="timeout" />
     <transition-group
       name="questions"

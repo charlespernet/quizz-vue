@@ -1,8 +1,12 @@
 <template>
-  <div>
-    <div class="card">
-      <div class="score">{{score}} pts</div>
-      <div class="question">{{content}}</div>
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <div class="question">{{content}}</div>
+      </div>
+      <div class="card-back">
+        <p>BACK</p>
+      </div>
     </div>
   </div>
 </template>
@@ -10,8 +14,7 @@
 <script>
 export default {
   props: {
-    content: String,
-    score: Number
+    content: String
   }
 };
 </script>
@@ -19,20 +22,44 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang='scss' scoped>
 .card {
-  background: #ffffff;
-  border-radius: 6px;
+  background-color: transparent;
+  perspective: 1000px;
+  height: 230px;
+  &-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  &-front,
+  &-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  &-front {
+    background-color: white;
+    color: black;
+  }
+  &-back {
+    box-sizing: border-box;
+    background-color: #0c1131;
+    border: 10px solid white;
+    color: white;
+    transform: rotateY(180deg);
+  }
 }
 
-.score {
-  background: #0c1131;
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 22px;
-  position: relative;
-  top: 0px;
-  margin: 0 20%;
-  border-radius: 0 0 10px 10px;
-  padding: 10px 25px;
+.card-rotated .card-inner {
+  transform: rotateY(-180deg);
 }
 
 .question {
@@ -40,6 +67,5 @@ export default {
   font-weight: bold;
   font-size: 22px;
   padding: 50px 15px;
-  height: 140px;
 }
 </style>
