@@ -3,16 +3,21 @@
     <Question :score="score" :content="currentQuestion.content" />
     <Timer :milliseconds="milliseconds" @timeout="timeout" />
     <transition-group
-      name="custom-classes-transition"
+      name="questions"
+      tag="div"
       enter-active-class="animate__animated animate__backInRight"
-      leave-active-class="animate__animated animate__backInLeft"
+      leave-active-class="animate__animated animate__backOutLeft"
       appear
     >
-      <div v-for="(answer, index) in shuffledAnswers" :key="index">
-        <div @click="selectAnswer(index)">
-          <Answer :answer="answer" :key="index" :class="answerClassObject(index)" />
-        </div>
-      </div>
+      <Answer
+        v-for="(answer, index) in shuffledAnswers"
+        :answer="answer"
+        :key="`${currentIndex}#${index}`"
+        :index="index"
+        @select="selectAnswer"
+        :class="answerClassObject(index)"
+        mode="out-in"
+      />
     </transition-group>
   </div>
   <div v-else>
@@ -34,7 +39,7 @@ export default {
   },
   data() {
     return {
-      index: 0,
+      currentIndex: 0,
       score: 0,
       selectedIndex: null,
       correctIndex: null,
@@ -44,7 +49,7 @@ export default {
   },
   computed: {
     currentQuestion: function() {
-      return this.questions[this.index];
+      return this.questions[this.currentIndex];
     }
   },
   components: {
@@ -57,18 +62,19 @@ export default {
       immediate: true,
       handler() {
         this.selectedIndex = null;
+        this.correctIndex = null;
         this.shuffleAnswers();
         this.frozen = false;
       }
     }
   },
   methods: {
-    selectAnswer(index) {
+    selectAnswer(event) {
       if (this.frozen) return;
+      this.frozen = true;
 
-      this.selectedIndex = index;
+      this.selectedIndex = event.index;
       _.delay(() => {
-        this.frozen = true;
         this.submitAnswer();
       }, 400);
       _.delay(() => {
@@ -84,7 +90,7 @@ export default {
       }
     },
     next() {
-      this.index++;
+      this.currentIndex++;
     },
     shuffleAnswers() {
       if (!this.currentQuestion) return;
@@ -99,11 +105,12 @@ export default {
     },
     answerClassObject(index) {
       return {
-        selected: !this.frozen && this.selectedIndex === index,
+        selected: this.selectedIndex === index,
         correct: this.frozen && this.correctIndex === index,
         incorrect:
           this.frozen &&
           this.selectedIndex === index &&
+          this.correctIndex !== null &&
           this.correctIndex !== index
       };
     }
@@ -111,6 +118,13 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+/* .questions-enter-active,
+  .questions-leave-active {
+    transition: all 0.5s;
+  }
+  .questions-enter,
+  .questions-leave-to {
+    opacity: 0;
+  } */
 </style>
