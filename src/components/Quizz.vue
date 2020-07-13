@@ -1,10 +1,10 @@
 <template>
   <div v-if="currentQuestion">
     <Question :score="score" :content="currentQuestion.content" />
-    <Timer :seconds="seconds" />
+    <Timer :milliseconds="milliseconds" />
     <div v-for="(answer, index) in shuffledAnswers" :key="index">
       <div @click="selectAnswer(index)">
-        <Answer :answer="answer" :key="index" v-bind:class="answerClassObject(index)" />
+        <Answer :answer="answer" :key="index" :class="answerClassObject(index)" />
       </div>
     </div>
   </div>
@@ -23,7 +23,7 @@ import Answer from "./quizz/Answer.vue";
 export default {
   props: {
     questions: Array,
-    seconds: Number
+    milliseconds: Number
   },
   data() {
     return {

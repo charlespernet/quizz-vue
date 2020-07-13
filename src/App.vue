@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <Quizz :questions="questions" :seconds="seconds" />
+    <Quizz :questions="questions" :milliseconds="milliseconds" />
   </div>
 </template>
 
@@ -18,7 +18,7 @@ export default {
     Quizz
   },
   data() {
-    return { questions: questions, seconds: 15 };
+    return { questions: questions, milliseconds: 10000 };
   }
 };
 </script>

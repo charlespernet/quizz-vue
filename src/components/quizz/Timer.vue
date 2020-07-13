@@ -1,6 +1,6 @@
 <template>
   <div class="timer">
-    <div class="timer-gauge" v-bind:style="{ width: timerPercent + '%' }"></div>
+    <div class="timer-gauge" :style="{ width: timerPercent + '%' }" :class="timerClassObject"></div>
   </div>
 </template>
 
@@ -8,17 +8,17 @@
 export default {
   data() {
     return {
-      remainingSeconds: this.seconds
+      remainingMilliSeconds: this.milliseconds
     };
   },
-  props: { seconds: Number },
+  props: { milliseconds: Number },
   watch: {
-    remainingSeconds: {
+    remainingMilliSeconds: {
       handler(value) {
-        if (value > 0) {
-          setTimeout(() => {
-            this.remainingSeconds--;
-          }, 1000);
+        console.log(value);
+        if (value <= 0) {
+          clearInterval(this.timerInterval);
+          this.remainingMilliSeconds = 0;
         }
       },
       immediate: true
@@ -26,8 +26,16 @@ export default {
   },
   computed: {
     timerPercent: function() {
-      return (this.remainingSeconds / this.seconds) * 100;
+      return (this.remainingMilliSeconds / this.milliseconds) * 100;
+    },
+    timerClassObject: function() {
+      return { high: this.timerPercent > 35, low: this.timerPercent <= 35 };
     }
+  },
+  mounted() {
+    this.timerInterval = setInterval(() => {
+      this.remainingMilliSeconds -= 100;
+    }, 100);
   }
 };
 </script>
@@ -39,8 +47,15 @@ export default {
   margin: 10px 0;
   border-radius: 6px;
   &-gauge {
-    background: greenyellow;
     height: 13px;
+    transition: width 0.1s ease;
+    transition: background-color 5s ease;
+  }
+  .high {
+    background-color: greenyellow;
+  }
+  .low {
+    background-color: red;
   }
 }
 </style>
