@@ -1,12 +1,20 @@
 <template>
   <div v-if="currentQuestion">
+    <p v-if="frozen">FROZEN</p>
     <Question :score="score" :content="currentQuestion.content" />
     <Timer :milliseconds="milliseconds" />
-    <div v-for="(answer, index) in shuffledAnswers" :key="index">
-      <div @click="selectAnswer(index)">
-        <Answer :answer="answer" :key="index" :class="answerClassObject(index)" />
+    <transition-group
+      name="custom-classes-transition"
+      enter-active-class="animate__animated animate__backInRight"
+      leave-active-class="animate__animated animate__backInLeft"
+      appear
+    >
+      <div v-for="(answer, index) in shuffledAnswers" :key="index">
+        <div @click="selectAnswer(index)">
+          <Answer :answer="answer" :key="index" :class="answerClassObject(index)" />
+        </div>
       </div>
-    </div>
+    </transition-group>
   </div>
   <div v-else>
     <Question :score="score" :content="'plus de questions'" />
@@ -32,7 +40,8 @@ export default {
       answered: false,
       selectedIndex: null,
       correctIndex: null,
-      shuffledAnswers: []
+      shuffledAnswers: [],
+      frozen: false
     };
   },
   computed: {
@@ -52,11 +61,15 @@ export default {
         this.selectedIndex = null;
         this.answered = false;
         this.shuffleAnswers();
+        this.frozen = false;
       }
     }
   },
   methods: {
     selectAnswer(index) {
+      if (this.frozen) return;
+
+      this.frozen = true;
       this.selectedIndex = index;
       _.delay(() => {
         this.submitAnswer();
