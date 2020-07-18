@@ -1,11 +1,11 @@
 [
   {
     "content": "Quel animal ?",
-    "correct_answer": "Cheetah",
+    "correct_answer": "Le pigeon",
     "incorrect_answers": [
       "Lion",
-      "Thomson&rsquo;s Gazelle",
-      "Pronghorn Antelope"
+      "Gazelle",
+      "Antilope"
     ]
   },
   {
