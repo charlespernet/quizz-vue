@@ -119,12 +119,4 @@ export default {
 </script>
 
 <style scoped>
-/* .questions-enter-active,
-  .questions-leave-active {
-    transition: all 0.5s;
-  }
-  .questions-enter,
-  .questions-leave-to {
-    opacity: 0;
-  } */
 </style>
