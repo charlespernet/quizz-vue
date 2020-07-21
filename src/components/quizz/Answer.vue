@@ -18,8 +18,9 @@ export default {
 <style scoped>
 .answer {
   padding: 1px;
-  background: white;
-  color: black;
+  background: #0c1131;
+  border: 2px solid white;
+  color: white;
   margin: 10px 0;
   font-weight: bold;
   font-size: 18px;
@@ -29,10 +30,10 @@ export default {
 }
 
 .correct {
-  background: greenyellow;
+  background: green;
 }
 
 .incorrect {
-  background: lightcoral;
+  background: orangered;
 }
 </style>

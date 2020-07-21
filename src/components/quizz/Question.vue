@@ -5,7 +5,7 @@
         <div class="question">{{content}}</div>
       </div>
       <div class="card-back">
-        <p>BACK</p>
+        <img src="../../images/logo.svg" />
       </div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="timer">
-    <div class="timer-gauge" :style="{ width: timerPercent + '%' }" :class="timerClassObject"></div>
+    <div class="timer-gauge" :style="{ width: timerPercent + '%' }"></div>
   </div>
 </template>
 
@@ -50,12 +50,7 @@ export default {
     height: 13px;
     transition: width 0.1s ease;
     transition: background-color 5s ease;
-  }
-  .high {
-    background-color: greenyellow;
-  }
-  .low {
-    background-color: red;
+    background-color: #0c1131;
   }
 }
 </style>

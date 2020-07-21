@@ -1,33 +1,39 @@
 <template>
-  <div v-if="currentQuestion">
-    <Question :content="currentQuestion.content" :class="{'card-rotated': frozen}" />
-    <Timer :milliseconds="milliseconds" @timeout="timeout" />
-    <transition-group
-      name="questions"
-      tag="div"
-      enter-active-class="animate__animated animate__backInRight"
-      leave-active-class="animate__animated animate__backOutLeft"
-      appear
-    >
-      <Answer
-        v-for="(answer, index) in shuffledAnswers"
-        :answer="answer"
-        :key="`${currentIndex}#${index}`"
-        :index="index"
-        @select="selectAnswer"
-        :class="answerClassObject(index)"
-        mode="out-in"
-      />
-    </transition-group>
-  </div>
-  <div v-else>
-    <Question :score="score" :content="'plus de questions'" />
+  <div>
+    <Header :score="score" />
+    <div class="container">
+      <div v-if="currentQuestion">
+        <Question :content="currentQuestion.content" :class="{'card-rotated': frozen}" />
+        <Timer :milliseconds="milliseconds" @timeout="timeout" />
+        <transition-group
+          name="questions"
+          tag="div"
+          enter-active-class="animate__animated animate__backInRight"
+          leave-active-class="animate__animated animate__backOutLeft"
+          appear
+        >
+          <Answer
+            v-for="(answer, index) in shuffledAnswers"
+            :answer="answer"
+            :key="`${currentIndex}#${index}`"
+            :index="index"
+            @select="selectAnswer"
+            :class="answerClassObject(index)"
+            mode="out-in"
+          />
+        </transition-group>
+      </div>
+      <div v-else>
+        <Question :score="score" :content="'plus de questions'" />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import _ from "lodash";
 
+import Header from "./quizz/Header.vue";
 import Question from "./quizz/Question.vue";
 import Timer from "./quizz/Timer.vue";
 import Answer from "./quizz/Answer.vue";
@@ -53,6 +59,7 @@ export default {
     }
   },
   components: {
+    Header,
     Question,
     Timer,
     Answer

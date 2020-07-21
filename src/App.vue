@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <Header />
     <Quizz :questions="questions" :milliseconds="milliseconds" />
   </div>
 </template>
@@ -8,13 +7,11 @@
 <script>
 import questions from "./data/questions.json";
 
-import Header from "./components/Header.vue";
 import Quizz from "./components/Quizz.vue";
 
 export default {
   name: "App",
   components: {
-    Header,
     Quizz
   },
   data() {
@@ -32,10 +29,32 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #ffffff;
-  margin: 0;
 }
 
 body {
   background: #0c1131;
+  margin: 0;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
 }
 </style>
