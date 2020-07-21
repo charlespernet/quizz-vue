@@ -16,5 +16,23 @@
       "Brooklyn",
       "lagger"
     ]
+  },
+  {
+    "content": "quel jeu ?",
+    "correct_answer": "Destiny",
+    "incorrect_answers": [
+      "Pong",
+      "Rivoli",
+      "Catan"
+    ]
+  },
+  {
+    "content": "Quel sport ?",
+    "correct_answer": "Velo",
+    "incorrect_answers": [
+      "Ski",
+      "Skate",
+      "Golf"
+    ]
   }
 ]
