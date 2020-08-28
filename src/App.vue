@@ -1,22 +1,25 @@
 <template>
   <div id="app">
-    <Quizz :questions="questions" :milliseconds="milliseconds" />
+    <!-- <Quizz :questions="questions" :milliseconds="milliseconds" /> -->
+    <Rankings />
   </div>
 </template>
 
 <script>
 import questions from "./data/questions.json";
 
-import Quizz from "./components/Quizz.vue";
+// import Quizz from "./components/Quizz.vue";
+import Rankings from "./components/ranking/Rankings.vue";
 
 export default {
   name: "App",
   components: {
-    Quizz
+    // Quizz,
+    Rankings,
   },
   data() {
     return { questions: questions, milliseconds: 10000 };
-  }
+  },
 };
 </script>
 

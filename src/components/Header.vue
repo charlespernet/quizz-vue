@@ -1,9 +1,9 @@
 <template>
   <div class="header">
-    <img src="../../images/logo.svg" />
+    <img src="../images/logo.svg" />
     <div class="score">
       <span class="score-number">{{score}}</span>
-      <span class="score-text">points</span>
+      <span v-if="score" class="score-text">points</span>
     </div>
   </div>
 </template>
@@ -11,8 +11,8 @@
 <script>
 export default {
   props: {
-    score: Number
-  }
+    score: Number,
+  },
 };
 </script>
 

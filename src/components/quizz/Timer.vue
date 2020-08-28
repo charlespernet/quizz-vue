@@ -8,7 +8,7 @@
 export default {
   data() {
     return {
-      remainingMilliSeconds: this.milliseconds
+      remainingMilliSeconds: this.milliseconds,
     };
   },
   props: { milliseconds: Number },
@@ -18,25 +18,25 @@ export default {
         if (value <= 0) {
           clearInterval(this.timerInterval);
           this.remainingMilliSeconds = 0;
-          this.$emit("timeout", "someValue");
+          this.$emit("timeout", "Game Over");
         }
       },
-      immediate: true
-    }
+      immediate: true,
+    },
   },
   computed: {
-    timerPercent: function() {
+    timerPercent: function () {
       return (this.remainingMilliSeconds / this.milliseconds) * 100;
     },
-    timerClassObject: function() {
+    timerClassObject: function () {
       return { high: this.timerPercent > 35, low: this.timerPercent <= 35 };
-    }
+    },
   },
   mounted() {
     this.timerInterval = setInterval(() => {
       this.remainingMilliSeconds -= 100;
     }, 100);
-  }
+  },
 };
 </script>
 

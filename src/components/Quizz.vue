@@ -33,7 +33,7 @@
 <script>
 import _ from "lodash";
 
-import Header from "./quizz/Header.vue";
+import Header from "./Header.vue";
 import Question from "./quizz/Question.vue";
 import Timer from "./quizz/Timer.vue";
 import Answer from "./quizz/Answer.vue";
@@ -41,7 +41,7 @@ import Answer from "./quizz/Answer.vue";
 export default {
   props: {
     questions: Array,
-    milliseconds: Number
+    milliseconds: Number,
   },
   data() {
     return {
@@ -50,19 +50,19 @@ export default {
       selectedIndex: null,
       correctIndex: null,
       shuffledAnswers: [],
-      frozen: false
+      frozen: false,
     };
   },
   computed: {
-    currentQuestion: function() {
+    currentQuestion: function () {
       return this.questions[this.currentIndex];
-    }
+    },
   },
   components: {
     Header,
     Question,
     Timer,
-    Answer
+    Answer,
   },
   watch: {
     currentQuestion: {
@@ -72,8 +72,8 @@ export default {
         this.correctIndex = null;
         this.shuffleAnswers();
         this.frozen = false;
-      }
-    }
+      },
+    },
   },
   methods: {
     selectAnswer(event) {
@@ -103,7 +103,7 @@ export default {
       if (!this.currentQuestion) return;
       let answers = [
         ...this.currentQuestion.incorrect_answers,
-        this.currentQuestion.correct_answer
+        this.currentQuestion.correct_answer,
       ];
       this.shuffledAnswers = _.shuffle(answers);
     },
@@ -118,10 +118,10 @@ export default {
           this.frozen &&
           this.selectedIndex === index &&
           this.correctIndex !== null &&
-          this.correctIndex !== index
+          this.correctIndex !== index,
       };
-    }
-  }
+    },
+  },
 };
 </script>
 
