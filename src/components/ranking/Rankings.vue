@@ -9,7 +9,6 @@
       :text="ranking.fields.Name"
       :score="ranking.fields.Score"
     />
-    <div id="boby">{{ rankings }}</div>
   </div>
 </template>
 
@@ -32,12 +31,13 @@ export default {
   },
   methods: {
     fetchData() {
+      console.log(process.env);
       this.loading = true;
       axios({
         url:
           "https://api.airtable.com/v0/app4WmGYrPS97vs2O/Results?maxRecords=3&view=Grid%20view",
         headers: {
-          Authorization: "Bearer keyb9cEx4MPbw7V3x",
+          Authorization: `Bearer ${process.env.VUE_APP_AIRTABLE_API_KEY}`,
         },
       }).then((res) => {
         this.loading = false;
