@@ -35,7 +35,7 @@ export default {
       this.loading = true;
       axios({
         url:
-          "https://api.airtable.com/v0/app4WmGYrPS97vs2O/Results?maxRecords=3&view=Grid%20view",
+          "https://api.airtable.com/v0/app4WmGYrPS97vs2O/Results?&view=Grid%20view&sort%5B0%5D%5Bfield%5D=Score&sort%5B0%5D%5Bdirection%5D=desc",
         headers: {
           Authorization: `Bearer ${process.env.VUE_APP_AIRTABLE_API_KEY}`,
         },
