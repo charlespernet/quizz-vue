@@ -3,7 +3,10 @@
     <Header :score="score" />
     <div class="container">
       <div v-if="currentQuestion">
-        <Question :content="currentQuestion.content" :class="{'card-rotated': frozen}" />
+        <Question
+          :content="currentQuestion.content"
+          :class="{ 'card-rotated': frozen }"
+        />
         <Timer :milliseconds="milliseconds" @timeout="timeout" />
         <transition-group
           name="questions"
@@ -38,11 +41,9 @@ import Question from "./quizz/Question.vue";
 import Timer from "./quizz/Timer.vue";
 import Answer from "./quizz/Answer.vue";
 
+import questions from "../data/questions.json";
+
 export default {
-  props: {
-    questions: Array,
-    milliseconds: Number,
-  },
   data() {
     return {
       currentIndex: 0,
@@ -51,6 +52,8 @@ export default {
       correctIndex: null,
       shuffledAnswers: [],
       frozen: false,
+      questions: questions,
+      milliseconds: 10000,
     };
   },
   computed: {

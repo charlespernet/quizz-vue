@@ -1,25 +1,17 @@
 <template>
   <div id="app">
     <!-- <Quizz :questions="questions" :milliseconds="milliseconds" /> -->
-    <Rankings />
+    <!-- <Rankings /> -->
+    <router-link to="/rankings">Go to Rankings</router-link>
+    <router-link to="/quizz">Go to Quizz</router-link>
+
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import questions from "./data/questions.json";
-
-// import Quizz from "./components/Quizz.vue";
-import Rankings from "./components/ranking/Rankings.vue";
-
 export default {
   name: "App",
-  components: {
-    // Quizz,
-    Rankings,
-  },
-  data() {
-    return { questions: questions, milliseconds: 10000 };
-  },
 };
 </script>
 
