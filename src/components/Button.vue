@@ -1,5 +1,5 @@
 <template>
-  <div :class="classObject" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium md:py-4 md:text-lg md:px-10 transition ease-in-out">
+  <div :class="classObject" class="cursor-pointer w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium md:py-4 md:text-lg md:px-10 transition ease-in-out">
     {{ text }}
   </div>
 </template>
