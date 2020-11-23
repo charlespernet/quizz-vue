@@ -1,8 +1,8 @@
 <template>
   <div class="ranking">
-    <div class="ranking-position">{{position}}</div>
-    <div class="ranking-text">{{text}}</div>
-    <div class="ranking-score">{{score}} Pts</div>
+    <div class="ranking-position">{{ position }}</div>
+    <div class="ranking-text">{{ text }}</div>
+    <div class="ranking-score">{{ score }} Pts</div>
   </div>
 </template>
 
