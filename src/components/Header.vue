@@ -1,8 +1,10 @@
 <template>
   <div class="header">
-    <img src="../images/logo.svg" />
+    <router-link to="/">
+      <img src="../images/logo.svg" />
+    </router-link>
     <div class="score">
-      <span class="score-number">{{score}}</span>
+      <span class="score-number">{{ score }}</span>
       <span v-if="score" class="score-text">points</span>
     </div>
   </div>
