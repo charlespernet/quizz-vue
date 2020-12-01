@@ -112,6 +112,7 @@ export default {
     },
     timeout() {
       this.frozen = true;
+      this.$router.push("entry");
     },
     answerClassObject(index) {
       return {

@@ -31,7 +31,6 @@ export default {
   },
   methods: {
     fetchData() {
-      console.log(process.env);
       this.loading = true;
       axios({
         url:

@@ -1,17 +1,14 @@
 <template>
   <div id="app">
-    <!-- <Quizz :questions="questions" :milliseconds="milliseconds" /> -->
-    <!-- <Rankings /> -->
-    <router-link to="/rankings">Go to Rankings</router-link>
-    <router-link to="/quizz">Go to Quizz</router-link>
-
-    <router-view></router-view>
+    <router-view><Home /></router-view>
   </div>
 </template>
 
 <script>
+import Home from "./components/Home.vue";
 export default {
   name: "App",
+  components: { Home },
 };
 </script>
 

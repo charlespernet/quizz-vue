@@ -6,12 +6,17 @@ Vue.use(VueRouter)
 
 import Quizz from "./components/Quizz.vue";
 import Rankings from "./components/ranking/Rankings.vue";
+import Home from "./components/Home.vue";
+import Entry from "./components/Entry.vue";
 
 import "tailwindcss/tailwind.css"
 
 const routes = [
+  { path: '/', component: Home },
   { path: '/rankings', component: Rankings },
-  { path: '/quizz', component: Quizz }
+  { path: '/quizz', component: Quizz },
+  { path: '/entry', component: Entry },
+  { path: '*', redirect: '/' }
 ]
 
 const router = new VueRouter({
