@@ -24,8 +24,9 @@ export default {
 }
 
 body {
-  background: #0c1131;
   margin: 0;
+  background-color: #0c1131;
+  background-image: url("./images/background.svg");
 }
 
 .container {

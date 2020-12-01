@@ -3,7 +3,7 @@
     <title>Path</title>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Quizz-Asking" transform="translate(-25.000000, 0.000000)">
-            <rect id="Background" fill="#0C1131" x="0" y="0" width="414" height="896"></rect>
+            <rect id="Background" fill="none" x="0" y="0" width="414" height="896"></rect>
             <g id="Nav" opacity="0.897879464" transform="translate(0.000000, -27.000000)">
                 <polygon id="Path" stroke="#FFFFFF" stroke-width="4" fill="#0C1131" points="0 0 78.7947393 0 128.467628 54.8364617 177.823706 0 256 0 128.467628 124"></polygon>
             </g>
