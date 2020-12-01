@@ -31,7 +31,7 @@ export default {
     }
   }
   img {
-    width: 50%;
+    width: 30%;
   }
 }
 </style>

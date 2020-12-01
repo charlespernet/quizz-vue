@@ -31,7 +31,7 @@ export default {
     border-radius: 50%;
     position: absolute;
     left: 0;
-    top: -7px;
+    top: -3px;
     border: 4px solid white;
     display: flex;
     flex-direction: column;
