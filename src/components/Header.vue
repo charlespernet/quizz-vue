@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <router-link to="/">
-      <img src="../images/logo.svg" />
+      <img class="ml-4 w-2/3 md:ml-12 md:w-48 lg:ml-20 lg:w-64" src="../images/logo.svg" />
     </router-link>
     <div class="score">
       <span class="score-number">{{ score }}</span>
@@ -31,9 +31,6 @@ export default {
       font-size: 42px;
       margin-right: 5px;
     }
-  }
-  img {
-    width: 30%;
   }
 }
 </style>
