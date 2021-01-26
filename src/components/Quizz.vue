@@ -112,7 +112,7 @@ export default {
     },
     timeout() {
       this.frozen = true;
-      this.$router.push("entry");
+      this.$router.push({ name: "entry", params: { score: this.score } });
     },
     answerClassObject(index) {
       return {
