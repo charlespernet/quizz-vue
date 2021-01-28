@@ -15,7 +15,7 @@ const routes = [
   { path: '/', component: Home },
   { path: '/rankings', component: Rankings },
   { path: '/quizz', component: Quizz },
-  { path: '/entry', component: Entry },
+  { path: '/entry', name: 'entry', component: Entry, props: true },
   { path: '*', redirect: '/' }
 ]
 
