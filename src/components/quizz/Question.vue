@@ -2,7 +2,7 @@
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-        <div class="question">{{content}}</div>
+        <div class="question">{{ content }}</div>
       </div>
       <div class="card-back">
         <img src="../../images/logo.svg" />
@@ -14,8 +14,8 @@
 <script>
 export default {
   props: {
-    content: String
-  }
+    content: String,
+  },
 };
 </script>
 
@@ -43,16 +43,18 @@ export default {
     border-radius: 7px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
   }
   &-front {
-    background-color: white;
-    color: black;
+    border: 3px solid white;
+    background-color: #0c1131;
+    color: white;
+    justify-content: space-around;
   }
   &-back {
     box-sizing: border-box;
     background-color: #0c1131;
-    border: 10px solid white;
+    border: 3px solid white;
     color: white;
     transform: rotateY(180deg);
   }
@@ -63,7 +65,7 @@ export default {
 }
 
 .question {
-  color: black;
+  color: white;
   font-weight: bold;
   font-size: 22px;
   padding: 50px 15px;

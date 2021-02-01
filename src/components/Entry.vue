@@ -33,7 +33,13 @@
             placeholder="Adresse email"
           />
           <div class="mt-3 sm:mt-0 sm:ml-3 shadow sm:flex-shrink-0">
-            <Button :text="'Envoyer'" :type="'full'" />
+            <Button v-if="loading" :text="'Envoi...'" :type="'full'" />
+            <Button
+              v-else
+              :text="'Envoyer'"
+              :type="'full'"
+              @click.native="postScore"
+            />
           </div>
         </form>
         <p class="mt-3 text-sm text-blue-200">
@@ -55,6 +61,17 @@ import Button from "./Button.vue";
 export default {
   components: { Header, Button },
   props: ["score"],
+  data() {
+    return {
+      error: null,
+      loading: false,
+    };
+  },
+  methods: {
+    postScore() {
+      this.loading = true;
+    },
+  },
 };
 </script>
 

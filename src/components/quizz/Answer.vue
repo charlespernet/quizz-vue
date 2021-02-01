@@ -1,6 +1,6 @@
 <template>
   <div class="answer" @click="onClick">
-    <p>{{answer}}</p>
+    <p>{{ answer }}</p>
   </div>
 </template>
 
@@ -10,30 +10,31 @@ export default {
   methods: {
     onClick() {
       this.$emit("select", { index: this.index });
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style scoped>
 .answer {
-  padding: 1px;
+  padding: 10px;
   background: #0c1131;
   border: 2px solid white;
+  border-radius: 7px;
   color: white;
   margin: 10px 0;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 25px;
 }
 .selected {
   background: lightblue;
 }
 
 .correct {
-  background: green;
+  background: #12b981;
 }
 
 .incorrect {
-  background: orangered;
+  background: #f82a09;
 }
 </style>
