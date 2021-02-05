@@ -13,9 +13,9 @@ import "tailwindcss/tailwind.css"
 
 const routes = [
   { path: '/', component: Home },
-  { path: '/rankings', component: Rankings },
   { path: '/quizz', component: Quizz },
-  { path: '/entry', component: Entry },
+  { path: '/entry', name: 'entry', component: Entry, props: true },
+  { path: '/rankings', name: 'rankings', component: Rankings },
   { path: '*', redirect: '/' }
 ]
 

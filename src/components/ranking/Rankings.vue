@@ -1,14 +1,16 @@
 <template>
   <div>
     <Header />
-    <div v-if="loading" class="loading">Loading...</div>
-    <Ranking
-      v-for="(ranking, index) in rankings"
-      :key="ranking.fields.Score"
-      :position="index + 1"
-      :text="ranking.fields.Name"
-      :score="ranking.fields.Score"
-    />
+    <div v-if="loading" class="loading">Chargement...</div>
+    <div class="container">
+      <Ranking
+        v-for="(ranking, index) in rankings"
+        :key="ranking.fields.Score"
+        :position="index + 1"
+        :text="ranking.fields.Name"
+        :score="ranking.fields.Score"
+      />
+    </div>
   </div>
 </template>
 
@@ -48,4 +50,9 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+.loading {
+  padding-top: 100px;
+  font-weight: bold;
+  font-size: 2rem;
+}
 </style>
