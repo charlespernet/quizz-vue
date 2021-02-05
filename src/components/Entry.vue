@@ -57,6 +57,7 @@
 <script>
 import Header from "./Header.vue";
 import Button from "./Button.vue";
+import Airtable from "airtable";
 
 export default {
   components: { Header, Button },
@@ -70,6 +71,30 @@ export default {
   methods: {
     postScore() {
       this.loading = true;
+
+      const base = new Airtable({
+        apiKey: process.env.VUE_APP_AIRTABLE_API_KEY,
+      }).base("app4WmGYrPS97vs2O");
+
+      base("Results").create(
+        [
+          {
+            fields: {
+              Score: 17,
+              Name: "Charles Pernet 2",
+              Email: "charlespernet2@gmail.com",
+            },
+          },
+        ],
+        (err) => {
+          if (err) {
+            console.error(err);
+            return;
+          }
+          this.loading = false;
+          this.$router.push({ name: "rankings" });
+        }
+      );
     },
   },
 };
