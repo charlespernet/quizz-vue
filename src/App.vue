@@ -42,11 +42,8 @@ body {
 @media (min-width: 992px) {
   .container {
     width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
+    padding-left: 120px;
+    padding-right: 120px;
   }
 }
 </style>
