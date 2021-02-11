@@ -53,7 +53,7 @@ export default {
       shuffledAnswers: [],
       frozen: false,
       questions: questions,
-      milliseconds: 1000000,
+      milliseconds: 10000,
     };
   },
   computed: {
