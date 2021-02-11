@@ -2,6 +2,14 @@
   <div>
     <Header />
     <main class="mx-auto max-w-7xl px-4">
+      <div v-if="errors.length" class='errors-container'>
+        <p>
+          <b>Vous devez corriger les erreurs suivantes</b>
+          <ul>
+            <li v-for="(error, index) in errors" :key="index+1">{{ error }}</li>
+          </ul>
+        </p>
+      </div>
       <div class="mt-16 text-center">
         <h1
           class="text-4xl tracking-tight font-extrabold text-white-900 sm:text-5xl md:text-6xl"
@@ -23,6 +31,7 @@
             required
             class="w-full px-5 py-3 placeholder-gray-500 focus:ring-green-500 focus:border-green-500 sm:max-w-xs border-gray-300"
             placeholder="Nom"
+            v-model="name"
           />
           <label for="emailAddress" class="sr-only">Adresse Email</label>
           <input
@@ -31,6 +40,7 @@
             required
             class="mt-3 sm:mt-0 sm:ml-3 w-full px-5 py-3 placeholder-gray-500 focus:ring-green-500 focus:border-green-500 sm:max-w-xs border-gray-300"
             placeholder="Adresse email"
+            v-model="email"
           />
           <div class="mt-3 sm:mt-0 sm:ml-3 shadow sm:flex-shrink-0">
             <Button v-if="loading" :text="'Envoi...'" :type="'full'" />
@@ -38,7 +48,7 @@
               v-else
               :text="'Envoyer'"
               :type="'full'"
-              @click.native="postScore"
+              @click.native="submit"
             />
           </div>
         </form>
@@ -64,9 +74,16 @@ export default {
   props: ["score"],
   data() {
     return {
-      error: null,
+      errors: [],
       loading: false,
+      name: null,
+      email: null,
     };
+  },
+  created() {
+    // if (!this.score) {
+    //   this.$router.push({ name: "home" });
+    // }
   },
   methods: {
     postScore() {
@@ -80,9 +97,9 @@ export default {
         [
           {
             fields: {
-              Score: 17,
-              Name: "Charles Pernet 2",
-              Email: "charlespernet2@gmail.com",
+              Score: this.score,
+              Name: this.name,
+              Email: this.email,
             },
           },
         ],
@@ -96,9 +113,34 @@ export default {
         }
       );
     },
+    checkForm() {
+      this.errors = [];
+      if (!this.name) {
+        this.errors.push("Votre nom est requis.");
+      }
+      if (!this.email) {
+        this.errors.push("Votre e-mail est requis.");
+      } else if (!this.validEmail(this.email)) {
+        this.errors.push("Cet email n'est pas valide.");
+      }
+    },
+    validEmail(email) {
+      const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return regex.test(email);
+    },
+    submit() {
+      this.checkForm();
+      if (!this.errors.length) {
+        this.postScore();
+      }
+    },
   },
 };
 </script>
 
 <style lang='scss' scoped>
+.errors-container {
+  background: red;
+  color: white;
+}
 </style>

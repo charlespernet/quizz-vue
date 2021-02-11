@@ -12,7 +12,7 @@ import Entry from "./components/Entry.vue";
 import "tailwindcss/tailwind.css"
 
 const routes = [
-  { path: '/', component: Home },
+  { path: '/', name: 'home', component: Home },
   { path: '/quizz', component: Quizz },
   { path: '/entry', name: 'entry', component: Entry, props: true },
   { path: '/rankings', name: 'rankings', component: Rankings },
