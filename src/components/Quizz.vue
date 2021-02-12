@@ -2,17 +2,17 @@
   <div>
     <Header :score="score" />
     <div class="container">
-      <div v-if="currentQuestion">
+      <div v-if="currentQuestion" class="quizz">
         <Question
           :content="currentQuestion.content"
           :class="{ 'card-rotated': frozen }"
         />
         <Timer :milliseconds="milliseconds" @timeout="timeout" />
         <transition-group
-          name="questions"
+          name="answers"
           tag="div"
+          class="answers"
           enter-active-class="animate__animated animate__backInRight"
-          leave-active-class="animate__animated animate__backOutLeft"
           appear
         >
           <Answer
@@ -130,4 +130,9 @@ export default {
 </script>
 
 <style scoped>
+.quizz {
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+}
 </style>

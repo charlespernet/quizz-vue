@@ -2,13 +2,13 @@
   <div class="header">
     <router-link to="/">
       <img
-        class="ml-4 w-2/3 md:ml-12 md:w-48 lg:ml-20 lg:w-64"
+        class="ml-4 w-2/3 md:ml-12 md:w-48 lg:ml-40"
         src="../images/logo.svg"
       />
     </router-link>
     <div class="score">
       <span class="score-number">{{ score }}</span>
-      <span v-if="score" class="score-text">Pts</span>
+      <span v-if="Number.isInteger(score)" class="score-text">Pts</span>
     </div>
   </div>
 </template>
@@ -28,7 +28,7 @@ export default {
   justify-content: space-between;
   margin-bottom: 15px;
   .score {
-    padding: 25px 60px 0px;
+    padding: 0px 60px;
     font-size: 18px;
     &-number {
       font-size: 50px;
