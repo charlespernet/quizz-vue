@@ -27,7 +27,7 @@
         </transition-group>
       </div>
       <div v-else>
-        <Question :score="score" :content="'plus de questions'" />
+        <Question :score="score" :content="'plus de question'" />
       </div>
     </div>
   </div>
@@ -52,8 +52,8 @@ export default {
       correctIndex: null,
       shuffledAnswers: [],
       frozen: false,
-      questions: questions,
-      milliseconds: 10000,
+      questions: _.shuffle(questions),
+      milliseconds: 180000,
     };
   },
   computed: {

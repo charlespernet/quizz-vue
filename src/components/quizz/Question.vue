@@ -68,6 +68,6 @@ export default {
   color: white;
   font-weight: bold;
   font-size: 22px;
-  padding: 50px 15px;
+  padding: 50px 40px;
 }
 </style>

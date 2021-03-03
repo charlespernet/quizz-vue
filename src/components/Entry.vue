@@ -11,14 +11,10 @@
         </p>
       </div>
       <div class="mt-16 text-center">
-        <h1
-          class="text-4xl tracking-tight font-extrabold text-white-900 sm:text-5xl md:text-6xl"
-        >
-          Mais qui est ce champion ?
-        </h1>
-        <p>Ton score : {{ score }} points</p>
+        <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-6xl">Bravo !</h1>
+        <p class="text-4xl py-6 font-extrabold sm:text-5xl md:text-6xl">{{ score }} points</p>
         <p
-          class="mt-3 max-w-md mx-auto text-base text-gray-200 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl"
+          class="mt-3 max-w-md mx-auto sm:text-lg md:mt-5 md:text-xl md:max-w-3xl"
         >
           Entrez votre nom et faites enfin savoir au monde entier qui est le
           vrai supporter des Girondins de Bordeaux.
@@ -81,9 +77,9 @@ export default {
     };
   },
   created() {
-    // if (!this.score) {
-    //   this.$router.push({ name: "home" });
-    // }
+    if (!Number.isInteger(this.score)) {
+      this.$router.push({ name: "home" });
+    }
   },
   methods: {
     postScore() {

@@ -11,9 +11,10 @@
         <p
           class="mt-3 max-w-md mx-auto text-base text-gray-200 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl"
         >
-          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
-          cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
-          aliqua.
+          Imaginé et développé par deux supporters des Girondins de Bordeaux ce
+          quizz vous permettra de plonger dans l’histoire des marines et blancs.
+          Chaque quizz dure 3 min et un score final vous permettra d’intégrer le
+          classement général.
         </p>
 
         <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
