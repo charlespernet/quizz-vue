@@ -1,11 +1,10 @@
 <template>
-  <div class="header">
-    <router-link to="/">
-      <img
-        class="ml-4 w-2/3 md:ml-12 md:w-48 lg:ml-40"
-        src="../images/logo.svg"
-      />
-    </router-link>
+  <div class="header container">
+    <div class="logo">
+      <router-link to="/">
+        <img class="ml-4" src="../images/logo.svg" />
+      </router-link>
+    </div>
     <div class="score">
       <span class="score-number">{{ score }}</span>
       <span v-if="Number.isInteger(score)" class="score-text">Pts</span>
@@ -27,9 +26,14 @@ export default {
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
+  .logo {
+    width: 150px;
+  }
   .score {
-    padding: 0px 60px;
+    flex: 2;
     font-size: 18px;
+    text-align: right;
+    padding: 0 20px;
     &-number {
       font-size: 50px;
       margin-right: 5px;
