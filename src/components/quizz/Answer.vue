@@ -19,7 +19,7 @@ export default {
 .answer {
   padding: 10px;
   background: #0c1131;
-  border: 2px solid white;
+  border: 1px solid white;
   border-radius: 7px;
   color: white;
   margin: 10px 0;

@@ -2,7 +2,7 @@
   <div class="header container">
     <div class="logo">
       <router-link to="/">
-        <img class="ml-4" src="../images/logo.svg" />
+        <img src="../images/logo.svg" />
       </router-link>
     </div>
     <div class="score">
@@ -25,9 +25,9 @@ export default {
 .header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
+  align-items: center;
   .logo {
-    width: 150px;
+    width: 130px;
   }
   .score {
     flex: 2;
