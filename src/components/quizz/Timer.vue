@@ -43,14 +43,16 @@ export default {
 <style lang='scss' scoped>
 .timer {
   background: white;
-  padding: 3px;
-  margin: 15px 0;
+  padding: 2px;
+  margin-top: 12px;
+  margin-bottom: 5px;
   border-radius: 7px;
   &-gauge {
     height: 16px;
     transition: width 0.1s ease;
     transition: background-color 5s ease;
     background-color: #0c1131;
+    border-radius: 6px;
   }
 }
 </style>
