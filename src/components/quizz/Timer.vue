@@ -44,11 +44,11 @@ export default {
 .timer {
   background: white;
   padding: 2px;
-  margin-top: 12px;
-  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 4px;
   border-radius: 7px;
   &-gauge {
-    height: 16px;
+    height: 6px;
     transition: width 0.1s ease;
     transition: background-color 5s ease;
     background-color: #0c1131;
