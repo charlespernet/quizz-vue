@@ -10,14 +10,13 @@
           </ul>
         </p>
       </div>
-      <div class="mt-16 text-center">
+      <div class="mt-4 text-center">
         <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-6xl">Bravo !</h1>
-        <p class="text-4xl py-6 font-extrabold sm:text-5xl md:text-6xl">{{ score }} points</p>
+        <p class="text-4xl font-extrabold sm:text-5xl md:text-6xl">{{ score }} points</p>
         <p
           class="mt-3 max-w-md mx-auto sm:text-lg md:mt-5 md:text-xl md:max-w-3xl"
         >
-          Entrez votre nom et faites enfin savoir au monde entier qui est le
-          vrai supporter des Girondins de Bordeaux.
+          Entrez votre nom et intégrez le classement des meilleurs supporters des Girondins de Bordeaux.
         </p>
         <form class="mt-8 sm:flex justify-center text-gray-700">
           <label for="name" class="sr-only">Nom</label>
@@ -121,7 +120,8 @@ export default {
       }
     },
     validEmail(email) {
-      const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      const regex =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return regex.test(email);
     },
     submit() {

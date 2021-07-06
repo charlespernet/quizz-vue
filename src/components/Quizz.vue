@@ -56,6 +56,11 @@ export default {
       milliseconds: 180000,
     };
   },
+  mounted() {
+    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+      document.documentElement.requestFullscreen();
+    }
+  },
   computed: {
     currentQuestion: function () {
       return this.questions[this.currentIndex];
@@ -134,5 +139,8 @@ export default {
   display: flex;
   flex-direction: column;
   height: 85vh;
+}
+.answers {
+  height: 60%;
 }
 </style>

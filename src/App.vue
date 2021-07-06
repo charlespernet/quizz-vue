@@ -28,6 +28,12 @@ body {
   margin: 0;
 }
 
+*:fullscreen,
+*:-webkit-full-screen,
+*:-moz-full-screen {
+  background: #0c1131;
+}
+
 .container {
   padding-right: 15px;
   padding-left: 15px;

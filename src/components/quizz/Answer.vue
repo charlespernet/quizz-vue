@@ -17,14 +17,17 @@ export default {
 
 <style scoped>
 .answer {
-  padding: 10px;
   background: #0c1131;
-  border: 2px solid white;
+  border: 1px solid white;
   border-radius: 7px;
   color: white;
-  margin: 10px 0;
+  margin: 8px 0;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 1.4rem;
+  height: 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .selected {
   background: lightblue;
