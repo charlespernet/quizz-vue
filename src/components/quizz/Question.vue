@@ -24,16 +24,17 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang='scss' scoped>
 .card-container {
-  height: 230px;
+  height: 40%;
+  min-height: 230px;
 }
 .card {
   background-color: transparent;
   perspective: 1000px;
-  height: 230px;
+  height: 100%;
   &-inner {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: inherit;
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
@@ -43,7 +44,7 @@ export default {
   &-back {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: inherit;
     backface-visibility: hidden;
     border-radius: 7px;
     display: flex;
@@ -56,7 +57,6 @@ export default {
     justify-content: space-around;
   }
   &-back {
-    box-sizing: border-box;
     background-color: #0c1131;
     border: 2px solid white;
     color: white;
@@ -71,9 +71,10 @@ export default {
 .question {
   color: white;
   font-weight: bold;
-  font-size: 22px;
-  padding: 5px 40px;
+  font-size: 1.3rem;
+  padding: 5px 25px;
   display: flex;
+  line-height: 1.5rem;
   flex-direction: column;
   justify-content: space-around;
 }

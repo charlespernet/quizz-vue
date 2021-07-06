@@ -140,4 +140,7 @@ export default {
   flex-direction: column;
   height: 85vh;
 }
+.answers {
+  height: 60%;
+}
 </style>
