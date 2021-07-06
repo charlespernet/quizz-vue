@@ -1,11 +1,13 @@
 <template>
-  <div class="card">
-    <div class="card-inner">
-      <div class="card-front">
-        <div class="question">{{ content }}</div>
-      </div>
-      <div class="card-back">
-        <img src="../../images/logo.svg" />
+  <div class="card-container">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="question">{{ content }}</div>
+        </div>
+        <div class="card-back">
+          <img src="../../images/logo.svg" />
+        </div>
       </div>
     </div>
   </div>
@@ -21,6 +23,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang='scss' scoped>
+.card-container {
+  height: 230px;
+}
 .card {
   background-color: transparent;
   perspective: 1000px;
@@ -42,11 +47,10 @@ export default {
     backface-visibility: hidden;
     border-radius: 7px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-around;
   }
   &-front {
-    border: 3px solid white;
+    border: 2px solid white;
     background-color: #0c1131;
     color: white;
     justify-content: space-around;
@@ -54,7 +58,7 @@ export default {
   &-back {
     box-sizing: border-box;
     background-color: #0c1131;
-    border: 3px solid white;
+    border: 2px solid white;
     color: white;
     transform: rotateY(180deg);
   }
@@ -68,6 +72,9 @@ export default {
   color: white;
   font-weight: bold;
   font-size: 22px;
-  padding: 50px 40px;
+  padding: 5px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 </style>
