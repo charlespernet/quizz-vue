@@ -27,7 +27,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   .logo {
-    width: 130px;
+    width: 110px;
   }
   .score {
     flex: 2;
