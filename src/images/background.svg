@@ -1,0 +1,8 @@
+<svg width="88px" height="24px" viewBox="0 0 88 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Artboard" transform="translate(-44.000000, -40.000000)" fill-rule="nonzero" fill-opacity="0.04">
+    <g id="chevron" transform="translate(44.000000, 40.000000)">
+      <path d="M0,0 L34.419,17.215 L41.9976393,20.992 L42,20.99 L42,24 L8,24 L5.53,22.76 C2.23425437,21.1131115 0.118645414,17.7924309 0.00483297096,14.1262835 L0,13.82 L0,0 Z M42,0 L41.9996393,16.984 L41.9978285,16.986 L40,15.99 L40.0000841,16 L8,0 L42,0 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+      <path d="M84,0 L84,13.82 L83.995167,14.1262835 C83.8813546,17.7924309 81.7657456,21.1131115 78.47,22.76 L78.47,22.76 L76,24 L42,24 L42,20.99 L42.0023607,20.992 L49.581,17.215 L84,0 Z M76,0 L43.9999159,16 L44,15.99 L42.0021715,16.986 L42.0003607,16.984 L42,0 L76,0 Z" id="Combined-Shape" fill="#D6D8D9"></path>
+    </g>
+  </g>
+</svg>
