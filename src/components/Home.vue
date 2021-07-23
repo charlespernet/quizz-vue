@@ -15,18 +15,18 @@
             md:max-w-3xl
             font-medium
             leading-6
+            mb-10
           "
         >
-          Imaginé et développé par deux fans de football, Quizz Foot vous permet
-          de passer un bon moment en testant vos connaissances. Chaque quizz
-          dure 3 min et un score final vous permettra d'intégrer le classement
-          général.
+          Imaginé et développé par deux fans de football, Quizz Foot vous
+          propose de passer un bon moment en testant vos connaissances. Un quizz
+          dure 3 minutes et pas une seconde de plus !
         </p>
 
         <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
           <div class="rounded-md shadow">
             <router-link to="/quizz">
-              <Button :text="'Commencer'" :type="'full'" />
+              <Button :text="'C\'est parti !'" :type="'fullbold'" />
             </router-link>
           </div>
           <div class="rounded-md shadow ml-0 mt-3 sm:ml-3 sm:mt-0">
