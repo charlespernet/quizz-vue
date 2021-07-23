@@ -23,6 +23,7 @@ export default {
   color: white;
   margin: 8px 0;
   font-weight: bold;
+  cursor: pointer;
   font-size: 1.4rem;
   height: 18%;
   font-style: italic;
