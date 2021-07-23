@@ -25,6 +25,7 @@ export default {
   font-weight: bold;
   font-size: 1.4rem;
   height: 18%;
+  font-style: italic;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
