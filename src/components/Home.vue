@@ -15,7 +15,7 @@
             md:max-w-3xl
             font-medium
             leading-6
-            mb-10
+            mb-14
           "
         >
           Imaginé et développé par deux fans de football, Quizz Foot vous

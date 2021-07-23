@@ -70,8 +70,7 @@ export default {
 
 .question {
   color: white;
-  font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   padding: 5px 25px;
   display: flex;
   line-height: 1.5rem;
