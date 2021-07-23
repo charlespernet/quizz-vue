@@ -1,177 +1,168 @@
 [
   {
-    "content": "Quel poste jouait Alain Roche ?",
-    "correct_answer": "Défenseur Central",
+    "content": "Lors d'un match de football, quel est la capacité maximale du Stade de France ?",
+    "correct_answer": "81338",
     "incorrect_answers": [
-      "Défenseur Latéral",
-      "Milieu Défensif",
-      "Attaquant"
+      "23630",
+      "34863",
+      "58792"
     ]
   },
   {
-    "content": "Le collectif Ultras Marine est le principal groupe de supporters bordelais, mais de quand date sa création ?",
-    "correct_answer": "1987",
+    "content": "Remplaçants compris, combien y a t il de joueurs dans une équipe de football professionnel ?",
+    "correct_answer": "23",
+    "incorrect_answers": [
+      "11",
+      "14",
+      "21"
+    ]
+  },
+  {
+    "content": "Quel est le seul club français à être devenu Champion d'Europe ?",
+    "correct_answer": "Marseille",
+    "incorrect_answers": [
+      "Paris",
+      "Nantes",
+      "Bordeaux"
+    ]
+  },
+  {
+    "content": "Combien de buts faut il marquer pour faire un Hat Tricks ?",
+    "correct_answer": "3",
+    "incorrect_answers": [
+      "1",
+      "2",
+      "4"
+    ]
+  },
+  {
+    "content": "Durant quelle coupe du monde, Diego Maradona marqua un but de la main surnommée La main de Dieu ?",
+    "correct_answer": "1986",
     "incorrect_answers": [
       "1982",
-      "1985",
-      "1989"
+      "1978",
+      "2000"
     ]
   },
   {
-    "content": "De ces illustres défenseurs girondins lequel s’est reconverti dans l'architecture ?",
-    "correct_answer": "Marc Planus",
+    "content": "Combien de clubs professionnels jouent en Ligue 1 ?",
+    "correct_answer": "18",
     "incorrect_answers": [
-      "Didier Sénac",
-      "Jean-Luc Dogon",
-      "Jean-Christophe Thouvenel"
+      "30",
+      "22",
+      "11"
     ]
   },
   {
-    "content": "Lequel de ces joueurs n'a jamais joués aux girondins de Bordeaux ?",
-    "correct_answer": "Rob Witschege",
+    "content": "Combien de fois les Girondins de Bordeaux sont ils devenus champions de France de D1 ?",
+    "correct_answer": "6",
     "incorrect_answers": [
-      "Raymond Domenech",
-      "Laurent Croci",
-      "Didier Deschamps"
+      "5",
+      "3",
+      "8"
     ]
   },
   {
-    "content": "Le 24 avril 1985 est le jour du record d'affluence au Stade Chaban-Delmas. Quel était le nombre de spectateurs ?",
-    "correct_answer": "40 200",
+    "content": "Quel est le seul gardien de but au monde à avoir marqué 3 penalties au cours d'une partie ?",
+    "correct_answer": "José Luis Chilavert",
     "incorrect_answers": [
-      "45 300",
-      "37 400",
-      "33 800"
+      "Gianluigi Buffon",
+      "Keylor Navas",
+      "Manuel Neuer"
     ]
   },
   {
-    "content": "En 2005 la star brésilienne Denilson débarque au Haillan, mais en provenance de quel club ?",
-    "correct_answer": "Betis Séville",
+    "content": "Hakan Sukur face à la Corée du Sud détient le record du monde du but le plus rapide. Au bout de combien de temps a t il marqué ?",
+    "correct_answer": "11 Secondes",
     "incorrect_answers": [
-      "Flamengo",
-      "Real Madrid",
-      "Galatasaray"
+      "38 Secondes",
+      "1 minute 12s",
+      "2 minute 56s"
     ]
   },
   {
-    "content": "A quel poste évoluait l'Espagnol Victor Tores Mestre lors de la saison 1998-1999 ?",
-    "correct_answer": "Défenseur latéral",
+    "content": "Quel est le seul joueur a avoir marqué pour 6 clubs différents en Ligue des Champions ?",
+    "correct_answer": "Zlatan Ibrahimović",
     "incorrect_answers": [
-      "Défenseur central",
-      "Milieu récupérateur",
-      "Ailier"
+      "Christiano Ronaldo",
+      "Nicolas Anelka",
+      "Samuel Eto'o"
     ]
   },
   {
-    "content": "Combien d'années Marius Trésor a t'il joué sous les couleurs girondines ?",
-    "correct_answer": "4 ans",
+    "content": "Comment s'appelle le célèbre manga des année 80 sur le football ?",
+    "correct_answer": "Olive & Tom",
     "incorrect_answers": [
-      "2 ans",
-      "6 ans",
-      "8 ans"
+      "Jeanne & Serge",
+      "Dragon Ball",
+      "Champions"
     ]
   },
   {
-    "content": "Où Christophe Dugarry à t'il commencé le football ?",
-    "correct_answer": "Lormont",
+    "content": "Combien de Champions League consécutives le Real de Madrid a t il gagné ?",
+    "correct_answer": "5",
     "incorrect_answers": [
-      "Blanquefort",
-      "Girondins de Bordeaux",
-      "Saint-Médar en Jalle"
+      "2",
+      "3",
+      "4"
     ]
   },
   {
-    "content": "Après son passage à Bordeaux, dans quel club Yoann Gouffran à t'il signé en 2013 ?",
-    "correct_answer": "Newcastle",
+    "content": "En quelle année la coupe du monde de football fût elle créée ?",
+    "correct_answer": "1930",
     "incorrect_answers": [
-      "Sunderland",
-      "Lyon",
-      "Valence"
+      "1920",
+      "1940",
+      "1950"
     ]
   },
   {
-    "content": "Meilleur buteur de l'histoire du club, combien de buts Alain Giresse a-t-il marqué ?",
-    "correct_answer": "179",
+    "content": "Quel est le premier joueur à remporter le championnat national dans 3 pays différents ?",
+    "correct_answer": "Christiano Ronaldo",
     "incorrect_answers": [
-      "152",
-      "165",
-      "201"
+      "Lionel Messi",
+      "Michel Platini",
+      "Marco Van Basten"
     ]
   },
   {
-    "content": "Contre quel club Pedro Miguel Paueleta a-t-il inscrit son premier but sous les couleurs des Girondins ?",
-    "correct_answer": "FC Nantes",
+    "content": "En 2006, pendant la finale de Coupe du Monde de football. À qui Zinedine Zidane met il un coup de tête ?",
+    "correct_answer": "Marco Materazzi",
     "incorrect_answers": [
-      "As Monaco",
-      "AJ Auxerre",
-      "Olympique lyonnais"
+      "Alessandro del Piero",
+      "Fernando Torres",
+      "Raymond Domenech"
     ]
   },
   {
-    "content": "Les ultras marines sont proches des ultras de quelle ville italienne ?",
-    "correct_answer": "Parme",
+    "content": "Quel est le seul joueur français à avoir remporté un ballon d'or ?",
+    "correct_answer": "Jean-Pierre Papin",
     "incorrect_answers": [
-      "Bologne",
-      "Livourne",
-      "Vérone"
-    ]
-  },
-  {
-    "content": "Quel était l'équipementier du club lors du titre de champion de France en 1999 ?",
-    "correct_answer": "Le Coq sportif",
-    "incorrect_answers": [
-      "Adidas",
-      "Ulsport",
-      "Puma"
-    ]
-  },
-  {
-    "content": "Lequel de ces joueurs n'a pas été formé au club ?",
-    "correct_answer": "Lilian Laslandes",
-    "incorrect_answers": [
-      "Benoit Trémoulinas",
+      "Michel Platini",
       "Alain Giresse",
-      "Check Diabaté"
+      "Thierry Henri"
     ]
   },
   {
-    "content": "Au classement des clubs français champions de France, les Girondins sont ?",
-    "correct_answer": "7ème",
+    "content": "Avec pas moins de 150000 places, où se trouve le plus grand stade de football du monde ?",
+    "correct_answer": "Corée du Nord",
     "incorrect_answers": [
-      "4ème",
-      "5ème",
-      "6ème"
+      "Chine",
+      "Bresil",
+      "Afrique du Sud"
     ]
   },
   {
-    "content": "Pour la première au Matmut Atlantique les marines et blanc ont battu quel club ?",
-    "correct_answer": "Montpellier",
+    "content": "Dans quel pays a eu lieu la première coupe du Monde de Football de l'histoire ?",
+    "correct_answer": "Uruguay",
     "incorrect_answers": [
-      "Monaco",
-      "Saint-Étienne",
-      "Rennes"
+      "France",
+      "Italie",
+      "Brésil"
     ]
   },
   {
-    "content": "Depuis combien d'années Bordeaux est-il invaincu à domicile face à Marseille ?",
-    "correct_answer": "43 ans",
-    "incorrect_answers": [
-      "31 ans",
-      "39 ans",
-      "47 ans"
-    ]
-  },
-  {
-    "content": "Deuxième joueur le plus capé de l'histoire du club avec plus de 500 matchs, de quel club arrivait Ulrich Ramé ?",
-    "correct_answer": "Angers",
-    "incorrect_answers": [
-      "Nantes",
-      "Brest",
-      "Laval"
-    ]
-  },
-  {
-    "content": "Combien y avait-il de brésiliens dans l'effectif bordelais champion de France en 2009 ?",
+    "content": "Combien de Coupe du Monde l'équipe d'Allemagne a t elle gagnée ?",
     "correct_answer": "4",
     "incorrect_answers": [
       "2",
@@ -180,165 +171,129 @@
     ]
   },
   {
-    "content": "Combien de joueurs bordelais ont participé à la Coupe du Monde en Russie ?",
-    "correct_answer": "0",
+    "content": "Quel est le seul pays à avoir toujours atteint les phases finales de la coupe du monde ?",
+    "correct_answer": "Brésil",
     "incorrect_answers": [
-      "1",
-      "2",
-      "3"
+      "Espagne",
+      "Allemagne",
+      "Argentine"
     ]
   },
   {
-    "content": "Quel est le montant du transfert de Jules Koundé au FC Séville ?",
-    "correct_answer": "25 millions",
-    "incorrect_answers": [
-      "15 millions",
-      "35 millions",
-      "45 millions"
-    ]
-  },
-  {
-    "content": "En quelle année le groupe M6 à t'il racheté le club ?",
-    "correct_answer": "1999",
-    "incorrect_answers": [
-      "1996",
-      "2002",
-      "2006"
-    ]
-  },
-  {
-    "content": "Président emblématique des années 80, Claude Bez se déplaçait avec une Rolls Royce de quelle couleur ?",
-    "correct_answer": "Rose",
-    "incorrect_answers": [
-      "Bleu Marine",
-      "Blanche",
-      "Jaune"
-    ]
-  },
-  {
-    "content": "Laquelle de ces années les girondins n'ont pas été champion de France ?",
-    "correct_answer": "1951",
-    "incorrect_answers": [
-      "1984",
-      "1987",
-      "2009"
-    ]
-  },
-  {
-    "content": "Avant de terminer sa carrière au Quatar, dans quel club anglais Christophe Dugarry à t'il fait un passage éclair ?",
-    "correct_answer": "Birmingham City",
-    "incorrect_answers": [
-      "Derby County",
-      "Queen Park Rangers",
-      "Fulham"
-    ]
-  },
-  {
-    "content": "Le jeune attaquant anglais Josh Maja est arrivé en Gironde en provenance de quel club ?",
-    "correct_answer": "Sunderland",
-    "incorrect_answers": [
-      "Crystal Palace",
-      "Arsenal",
-      "Everton"
-    ]
-  },
-  {
-    "content": "Combien de buts Zinedine Zidane à t'il marqué lors de sa première cape avec les bleus au Parc Lescures ?",
-    "correct_answer": "2",
-    "incorrect_answers": [
-      "0",
-      "1",
-      "3"
-    ]
-  },
-  {
-    "content": "En quelle année Aimé Jacquet à commencé a entrainé les Girondins de Bordeaux ?",
-    "correct_answer": "1981",
-    "incorrect_answers": [
-      "1979",
-      "1984",
-      "1998"
-    ]
-  },
-  {
-    "content": "En quelle année Claude Bez est il devenu président des Girondins de Bordeaux ?",
-    "correct_answer": "1978",
-    "incorrect_answers": [
-      "1971",
-      "1974",
-      "1975"
-    ]
-  },
-  {
-    "content": "Quel est le montant du transfert de Malcolm Filipe Silva de Oliveira des Girondins vers le FC Barcelone ?",
-    "correct_answer": "41 Millions d’euros",
-    "incorrect_answers": [
-      "26 Millions d’euros",
-      "34 Millions d’euros",
-      "53 Millions d’euros"
-    ]
-  },
-  {
-    "content": "En 2000, quelle équipe a éliminée les Girondins de Bordeaux en demi finale de la coupe de France ?",
-    "correct_answer": "Calais RUFC (CFA)",
-    "incorrect_answers": [
-      "Olympique lyonnais (D1)",
-      "AS Monaco (D1)",
-      "Nîmes Olympique (D2)"
-    ]
-  },
-  {
-    "content": "Le 19 mars 1996, les Girondins gagnent le quart de finale retour de la coupe UEFA face au Milan AC. Quel est le score ?",
-    "correct_answer": "3 - 0",
-    "incorrect_answers": [
-      "1 - 0",
-      "2 - 1",
-      "3 - 2"
-    ]
-  },
-  {
-    "content": "Alain Giresse est le joueur le plus capé de l’histoire du club des Girondins de Bordeaux. Combien de matchs a-t-il joué ?",
-    "correct_answer": "592",
-    "incorrect_answers": [
-      "347",
-      "453",
-      "534"
-    ]
-  },
-  {
-    "content": "Le 29 janvier 1999, les Girondins de Bordeaux gagnent largement contre l’Olympique de Marseille. Quel est le score final ?",
-    "correct_answer": "4-1",
+    "content": "En demi finale de la coupe du monde 2014 le Brésil perd contre l'Allemagne. Quel est le score final ?",
+    "correct_answer": "7-1",
     "incorrect_answers": [
       "3-1",
       "4-0",
-      "5-0"
+      "5-2"
     ]
   },
   {
-    "content": "Le 29 mai 1955, pour le premier match de football retransmis à la télévision française, quelle équipe jouait contre les Girondins ?",
-    "correct_answer": "LOSC",
+    "content": "Quel est le score final du match retour, FC Barcelone - PSG de 2017, connu sous le nom de Remontada ?",
+    "correct_answer": "6 - 1",
     "incorrect_answers": [
-      "Olympique de Marseille",
-      "Rennes",
-      "Angers"
+      "3 - 0",
+      "4 - 1",
+      "8 - 3"
     ]
   },
   {
-    "content": "En 1996, pour le quart de finale retour de la coupe UEFA, lesquels de ces joueurs marque contre le Milan AC ?",
-    "correct_answer": "Richard Witschge",
+    "content": "Combien de temps dure un match de football avec les prolongations ?",
+    "correct_answer": "120 minutes",
     "incorrect_answers": [
-      "François Grenet",
-      "Zinedine Zidane",
-      "Anthony Bancarel"
+      "90 minutes",
+      "110 minutes",
+      "130 minutes"
     ]
   },
   {
-    "content": "En 1996, lors du match retour du quart de finale de coupe de l'UEFA face au grand Milan AC, Didier Tholot à ouvert le score. Mais quel était le passeur décisif ?",
-    "correct_answer": "Bixente Lizarazu",
+    "content": "À ce jour, le transfert de Neymar de Barcelone vers Paris est le plus cher de l'histoire. Quel est son montant ? ",
+    "correct_answer": "222 Millions",
     "incorrect_answers": [
-      "Zinedine Zidane",
-      "Christophe Dugarry",
-      "Geoffray Toyes"
+      "105 Millions",
+      "120 Millions",
+      "180 Millions"
+    ]
+  },
+  {
+    "content": "Quel est le club professionnel avec le plus de titre de champion de France ?",
+    "correct_answer": "Saint Etienne",
+    "incorrect_answers": [
+      "Marseille",
+      "Paris",
+      "Nantes"
+    ]
+  },
+  {
+    "content": "Combien de fois le club de Saint Etienne a t il gagné le Championnat de France ?",
+    "correct_answer": "10",
+    "incorrect_answers": [
+      "3",
+      "6",
+      "8"
+    ]
+  },
+  {
+    "content": "Qui est la femme de Gerard Pique, défenseur central de Barcelone ?",
+    "correct_answer": "Shakira",
+    "incorrect_answers": [
+      "Céline Dion",
+      "Beyonce",
+      "Carla Bruni"
+    ]
+  },
+  {
+    "content": "Année 2000, quel club de football amateur a atteint la finale de la coupe de France ?",
+    "correct_answer": "Calais",
+    "incorrect_answers": [
+      "Carquefou",
+      "Chambery",
+      "Montceau-Les-Mines  "
+    ]
+  },
+  {
+    "content": "Avec 123 buts au compteur, quel est le meilleur buteur de l'histoire de l'Equipe de France ?",
+    "correct_answer": "Thierry Henri",
+    "incorrect_answers": [
+      "Michel Platini",
+      "Olivier Giroud",
+      "Zinedine Zidane"
+    ]
+  },
+  {
+    "content": "En pleine coupe du monde 2010, les joueurs de l'équipe de France ne sortent pas du bus. Qui est alors l'entraineur ?",
+    "correct_answer": "Raymond Domenech",
+    "incorrect_answers": [
+      "Laurent Blanc",
+      "Aymé Jacquet",
+      "Didier Deschamps"
+    ]
+  },
+  {
+    "content": "De quand date la création de l'équipe de France de football ?",
+    "correct_answer": "1904",
+    "incorrect_answers": [
+      "1789",
+      "1920",
+      "1969"
+    ]
+  },
+  {
+    "content": "En quelle année l'équipe de France de football gagne sa première coupe du monde ?",
+    "correct_answer": "1998",
+    "incorrect_answers": [
+      "1986",
+      "1994",
+      "2002"
+    ]
+  },
+  {
+    "content": "Quel est le score de la finale de la coupe du monde 1998 qui opposa le Brésil à la France ?",
+    "correct_answer": "0 - 3",
+    "incorrect_answers": [
+      "0 - 1",
+      "0 - 2",
+      "1 - 3"
     ]
   }
 ]
