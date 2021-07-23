@@ -14,9 +14,9 @@
         <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-6xl">Bravo !</h1>
         <p class="text-4xl font-extrabold sm:text-5xl md:text-6xl">{{ score }} points</p>
         <p
-          class="mt-3 max-w-md mx-auto sm:text-lg md:mt-5 md:text-xl md:max-w-3xl"
+          class="mt-3 max-w-md mx-auto md:mt-5 leading-6 font-medium text-xl md:max-w-3xl"
         >
-          Entrez votre nom et intégrez le classement des meilleurs supporters des Girondins de Bordeaux.
+          Intégrez notre classement du meilleur supporter de football, en inscrivant votre nom et e-mail ci-dessous.
         </p>
         <form class="mt-8 sm:flex justify-center text-gray-700">
           <label for="name" class="sr-only">Nom</label>
