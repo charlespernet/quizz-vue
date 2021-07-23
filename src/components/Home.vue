@@ -1,20 +1,26 @@
 <template>
   <div>
-    <Header />
     <main class="mx-auto max-w-7xl px-4">
-      <div class="mt-16 text-center">
-        <h1
-          class="text-4xl tracking-tight font-extrabold text-white-900 sm:text-5xl md:text-6xl"
-        >
-          Allez Bordeaux !!!
-        </h1>
+      <div class="mt-8 text-center">
+        <div class="logo">
+          <img src="../images/logo.svg" />
+        </div>
         <p
-          class="mt-3 max-w-md mx-auto text-base text-gray-200 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl"
+          class="
+            max-w-md
+            mx-auto
+            text-base text-gray-200
+            md:mt-5
+            text-xl
+            md:max-w-3xl
+            font-medium
+            leading-6
+          "
         >
-          Imaginé et développé par deux supporters des Girondins de Bordeaux ce
-          quizz vous permettra de plonger dans l’histoire des marines et blancs.
-          Chaque quizz dure 3 min et un score final vous permettra d’intégrer le
-          classement général.
+          Imaginé et développé par deux fans de football, Quizz Foot vous permet
+          de passer un bon moment en testant vos connaissances. Chaque quizz
+          dure 3 min et un score final vous permettra d'intégrer le classement
+          général.
         </p>
 
         <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
@@ -35,13 +41,18 @@
 </template>
 
 <script>
-import Header from "./Header.vue";
 import Button from "./Button.vue";
 
 export default {
-  components: { Header, Button },
+  components: { Button },
 };
 </script>
 
 <style lang='scss' scoped>
+.logo {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 200px;
+}
 </style>
